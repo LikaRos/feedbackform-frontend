@@ -9,6 +9,7 @@ import elipse from "assets/img/elipse.png";
 
 import {
   FormWrapper,
+  Title, 
   Input,
   Textarea,
   Button,
@@ -64,6 +65,7 @@ export const ContactForm = () => {
       </StyledElipse>
     <FormWrapper>
        <form onSubmit={handleSubmit}>
+       <Title>Reach out to us!</Title>
           <div>
               <Input
                 type="text"
@@ -81,6 +83,7 @@ export const ContactForm = () => {
                 type="email"
                 name="email"
                 value={email}
+                placeholder="Your e-mail*"
                 onChange={handleChange}
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
                 title="someone@example.com"
@@ -93,14 +96,13 @@ export const ContactForm = () => {
                 name="message"
                 value={message}
                 onChange={handleChange}
+                placeholder="Your message*"
                 pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 title="Type a text"
                 required
               />
           </div>
-          <Button type="submit">
-               Add contact
-          </Button>
+          <Button type="submit">Send message</Button>
     </form>
     </FormWrapper>
     <footer>
