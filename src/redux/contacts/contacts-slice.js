@@ -8,11 +8,13 @@ import {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    user: {
-      name: "",
-      email: "",
-      message: "",
-           },
+    users: [],
+
+    // user: {
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    //        },
     loading: false,
   },
 
@@ -24,7 +26,8 @@ const contactsSlice = createSlice({
     },
     [fetchAddContact.fulfilled]: (state, { payload }) => {
       state.loading = false;
-      state.user.push(payload);
+      console.log("payload" , payload);
+      state.users.push(payload);
     },
    
   },

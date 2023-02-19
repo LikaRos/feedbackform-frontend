@@ -1,5 +1,6 @@
 import { ContactForm } from './ContactForm/ContactForm';
 import '../index.css';
+import { Title } from '../styles/styledComponents';
 
 
 
@@ -9,10 +10,9 @@ export const App = () => {
   ///////////////////////////
   return (
     <>
-      <h1 className="title">Reach out to us!</h1>
+      <Title>Reach out to us!</Title>
       <ContactForm />
-      <h2 className="title">Contacts</h2>
-    
+        
     </>
   );
 };
